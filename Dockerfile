@@ -57,6 +57,7 @@ RUN wget -O models/ipadapter/ip-adapter_sd15.safetensors "https://huggingface.co
 RUN wget -O models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 RUN wget -O models/clip_vision/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/image_encoder/model.safetensors"
 RUN wget -O models/clip_vision/clip-vit-large-patch14-336.bin "https://huggingface.co/Kwai-Kolors/Kolors-IP-Adapter-Plus/resolve/main/image_encoder/pytorch_model.bin"
+RUN wget -O models/ipadapter/ip-adapter-plus_sd15.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors"
 
 # clip
 RUN wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
