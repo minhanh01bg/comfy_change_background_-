@@ -49,6 +49,15 @@ RUN wget -O models/controlnet/SD1.5/control_v11f1p_sd15_depth_fp16.safetensors "
 RUN wget -O models/controlnet/SD1.5/control_v11p_sd15_scribble_fp16.safetensors "https://huggingface.co/lllyasviel/control_v11p_sd15_scribble/resolve/main/diffusion_pytorch_model.fp16.safetensors?download=true"
 RUN wget -O models/controlnet/SD1.5/control_v11f1e_sd15_tile_fp16.safetensors "https://civitai.com/api/download/models/67566?type=Model&format=SafeTensor&token=bad767bc69c1c4ec4a66c647cbf771df"
 # https://huggingface.co/copybaiter/ControlNet/resolve/main/control_v11f1e_sd15_tile.safetensors
+
+# fix
+RUN mkdir -p models/ipadapter models/clip_vision
+RUN wget -O models/ipadapter/ip-adapter_sd15.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors"
+
+RUN wget -O models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
+RUN wget -O models/clip_vision/CLIP-ViT-bigG-14-laion2B-39B-b160k.safetensors "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/image_encoder/model.safetensors"
+RUN wget -O models/clip_vision/clip-vit-large-patch14-336.bin "https://huggingface.co/Kwai-Kolors/Kolors-IP-Adapter-Plus/resolve/main/image_encoder/pytorch_model.bin"
+
 # clip
 RUN wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 RUN wget -O models/clip/clip_l.safetensors "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors?download=true"
